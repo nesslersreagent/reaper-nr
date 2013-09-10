@@ -47,7 +47,7 @@ function log_file_download(req, res){
       for (var i=0; i<=i_data_D; i++){
         //console.log( data.D[i].T.toISOString() + ' ' + data.D[i].S.toString() + ' ' + data.D[i].N.toString() );  
         log_data = data.D[i].T.toISOString() + ' ' + data.D[i].S.toString() + ' ' + data.D[i].N.toString() + '\r\n';
-        fs.appendFileSync(file, log_data.substring(13), 'utf-8');    
+        fs.appendFileSync(file, log_data.substring(11), 'utf-8');    
       }
       res.download(file);
     });
