@@ -1,0 +1,9 @@
+{
+ "name":"reaper-nr",
+  "version":"1.0",
+  "dependencies":{
+      "express":"3.x",
+	  "jade":"0.35.0",
+	  "mongoskin":"0.6.0"
+  }
+}
