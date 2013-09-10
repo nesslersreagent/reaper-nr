@@ -1,0 +1,52 @@
+!!! 5
+html
+  head
+    title [ Project: Reaper ]
+    style
+      .boxed {
+      margin: 0px;
+      border: 1px solid gray;
+      padding: 0px;
+      }
+  body
+    #title(align='center')
+      br
+      span(style='display: none;')
+      strong
+        span(style='font-family: trebuchet ms,helvetica,sans-serif;')
+          span(style='font-size: 20px;') [ Project: Reaper ]
+      br
+    #text_area(align='center')
+      br
+      span(style='font-family: trebuchet ms,helvetica,sans-serif;')
+        span(style='font-size: 16px;')
+          | Number of logs collected:
+          span= num_of_logs
+          br
+          | Latest log dated:
+          span= latest_log_date
+          p
+            form(method='post', action='/logs')
+              | Latest log file download
+              br
+              button(type='submit') Download
+      br
+    br
+    #info.boxed(align='center')
+      blockquote
+        span(style='font-family: trebuchet ms,helvetica,sans-serif;')
+          span(style='font-size: 16px;')
+            | Usage:
+            br
+            | Click download to obtain the latest log file. Log files are int txt format.
+            br
+            | The time stamp is of the format "hh:mm:ss.milliseconds"
+    br
+    #footer(align='center')
+      span(style='font-family: trebuchet ms,helvetica,sans-serif;')
+        span(style='font-size: 16px;')
+          | Made by: Shaun
+          br
+          | (
+          a(href='https://www.facebook.com/nesslersreagent', target='_blank') facebook
+          | )
