@@ -46,8 +46,8 @@ function log_file_download(req, res){
     coll_reaper_data.findOne( { 'date': latest_log_date }, {'D.T': true, 'D.S': true, 'D.N': true}, function (err, data) {
       for (var i=0; i<=i_data_D; i++){
         //console.log( data.D[i].T.toISOString() + ' ' + data.D[i].S.toString() + ' ' + data.D[i].N.toString() );  
-        log_data = data.D[i].T.toISOString() + ' ' + data.D[i].S.toString() + ' ' + data.D[i].N.toString() + '\r\n';
-        fs.appendFileSync(file, log_data.substring(11), 'utf-8');    
+        log_data = data.D[i].T.toISOString().substr(11,12) + ' ' + data.D[i].S.toString() + ' ' + data.D[i].N.toString() + '\r\n';
+        fs.appendFileSync(file, log_data, 'utf-8');    
       }
       res.download(file);
     });
